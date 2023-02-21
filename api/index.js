@@ -7,7 +7,7 @@ app.use(require("cors")({ credentials: true }));
 
 app.get("/api/test", (req, res, next) => {
   res.json(
-    `Backend Hitted on ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}`
+    `Backend Hitted on ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()} ${req.hostname}`
   );
 });
 
